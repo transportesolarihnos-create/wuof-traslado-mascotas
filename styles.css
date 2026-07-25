@@ -175,7 +175,9 @@ HERO
 
     min-height:100vh;
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:45% 55%;
 
     align-items:center;
 
