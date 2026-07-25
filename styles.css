@@ -197,7 +197,7 @@ HERO
 
 .hero-slider img{
 
-    position:absolute;
+    object-position:center center;
 
     inset:0;
 
@@ -226,9 +226,12 @@ HERO
     inset:0;
 
     background:
-    linear-gradient(to right,
-    rgba(0,0,0,.82),
-    rgba(0,0,0,.45));
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.35) 0%,
+        rgba(0,0,0,.15) 40%,
+        rgba(0,0,0,0) 75%
+    );
 
 }
 
@@ -236,9 +239,13 @@ HERO
 
     position:relative;
 
-    z-index:10;
+    z-index:20;
 
-    max-width:700px;
+    padding-left:8%;
+
+    padding-right:40px;
+
+    max-width:650px;
 
 }
 
