@@ -1,1 +1,0 @@
-WUOF web profesional. Subir index.html y styles.css juntos. Reemplazar placeholders visuales por fotos reales cuando se desee.
