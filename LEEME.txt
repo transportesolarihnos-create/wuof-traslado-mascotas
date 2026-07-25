@@ -1,0 +1,9 @@
+WUOF - WEB NUEVA
+
+1. Descomprimí este ZIP.
+2. Subí index.html, styles.css y script.js a la raíz del repositorio.
+3. Conservá también en la raíz estas imágenes que ya subiste:
+   wuof-hero-perro-1.webp ... wuof-hero-perro-6.webp
+   wuof-camioneta-interior.webp
+   wuof-camioneta-rampa.png
+4. Reemplazá los archivos anteriores y hacé Commit.
