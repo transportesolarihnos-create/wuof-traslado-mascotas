@@ -1,7 +1,0 @@
-WUOF WEB CORREGIDA
-- Sin emojis ni perro dibujado en la portada.
-- Logo y proporciones móviles corregidos.
-- WhatsApp configurado: 341 228 8085.
-- Reseñas reales incorporadas.
-IMPORTANTE: faltan las fotos originales de WUOF para que quede idéntica a la maqueta.
-En esta versión los lugares de las fotos están marcados claramente para no reemplazarlos por dibujos falsos.
