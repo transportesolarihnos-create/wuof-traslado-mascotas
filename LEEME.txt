@@ -1,9 +1,7 @@
-WUOF - WEB NUEVA
-
-1. Descomprimí este ZIP.
-2. Subí index.html, styles.css y script.js a la raíz del repositorio.
-3. Conservá también en la raíz estas imágenes que ya subiste:
-   wuof-hero-perro-1.webp ... wuof-hero-perro-6.webp
-   wuof-camioneta-interior.webp
-   wuof-camioneta-rampa.png
-4. Reemplazá los archivos anteriores y hacé Commit.
+WUOF WEB CORREGIDA
+- Sin emojis ni perro dibujado en la portada.
+- Logo y proporciones móviles corregidos.
+- WhatsApp configurado: 341 228 8085.
+- Reseñas reales incorporadas.
+IMPORTANTE: faltan las fotos originales de WUOF para que quede idéntica a la maqueta.
+En esta versión los lugares de las fotos están marcados claramente para no reemplazarlos por dibujos falsos.
