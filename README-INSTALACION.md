@@ -38,3 +38,7 @@ El sitio está armado como una landing page de una sola página con secciones in
 
 ## Importante
 Este paquete contiene los archivos de la web listos para revisar y subir. No modifica automáticamente GitHub ni publica cambios en Cloudflare Pages. La publicación ocurre cuando subís los archivos al repositorio conectado y Cloudflare completa el despliegue.
+
+
+## Ajuste de estructura — versión compacta
+Se eliminó la sección repetitiva “Nuestra razón de ser / Ellos llevan personas...” porque la propuesta ya se explica en la portada. La página pasa directamente a las características del servicio y luego a los servicios, para acortar el recorrido móvil.
