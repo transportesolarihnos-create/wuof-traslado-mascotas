@@ -1,42 +1,40 @@
-# WUOF! — Rediseño v1
+# WUOF! — Web completa actualizada
 
-Paquete de reemplazo de los archivos principales para el sitio estático existente en Cloudflare Pages.
+Landing page estática para WUOF! Traslados de Mascotas Rosario, preparada para el sitio actual en Cloudflare Pages. Incluye el mensaje principal aprobado sobre taxis/aplicaciones, la especialización en mascotas y sus dueños, servicios, cobertura, galería de 22 imágenes, ocho reseñas, preguntas frecuentes y llamados a WhatsApp.
 
-## Archivos incluidos
-- `index.html`
-- `styles.css`
-- `script.js`
-- `sitemap.xml`
-- carpeta `imagenes-traslados/` (8 fotos optimizadas en WebP)
+## Contenido del paquete
+- `index.html`: página completa, metadatos SEO, datos estructurados y secciones.
+- `styles.css`: diseño responsive, identidad azul petróleo + arena.
+- `script.js`: medición del clic de WhatsApp y año automático del pie.
+- `sitemap.xml`: sitemap de la landing page.
+- `imagenes-traslados/`: 22 imágenes optimizadas WebP usadas en la galería y portada.
 
-## Importante: no reemplazar el repositorio entero
-Este ZIP **no contiene los recursos de imágenes existentes**. Extraé estos archivos y copiá/sobrescribí los cuatro archivos indicados en la raíz del repositorio y copiá también la carpeta `imagenes-traslados/` completa. Conservá `hero.png`, `hero2.png`, `hero3.png`, `hero4.png`, las demás imágenes, `robots.txt` y cualquier otra configuración existente.
+## Identidad visual
+- Azul petróleo: `#173B4D`
+- Arena: `#F1E8D8`
+- Blanco: `#FFFFFF`
+- Acento terracota: `#D98961`
+- Los botones de WhatsApp mantienen el verde reconocible.
 
-La nueva portada usa `hero2.png`, que ya existe en el repositorio. Antes de publicar, confirmá que esa imagen sea la que querés mostrar como foto principal y que el texto alternativo describa fielmente su contenido. Si la imagen no es una foto real del vehículo/mascota, reemplazala por una foto propia y optimizada.
+## Antes de publicar
+1. Hacé una copia/backup de la versión actual del repositorio.
+2. Extraé el ZIP y copiá `index.html`, `styles.css`, `script.js`, `sitemap.xml` y la carpeta `imagenes-traslados/` a la raíz del sitio en GitHub, reemplazando los archivos correspondientes.
+3. Conservá los archivos de configuración existentes, como `robots.txt`, configuración de Cloudflare y otros recursos no incluidos en este paquete.
+4. Abrí el preview de Cloudflare Pages y revisá escritorio y móvil; comprobá especialmente la imagen de portada, la galería, las reseñas y todos los botones de WhatsApp.
+5. Revisá que las reseñas estén transcritas como querés publicarlas y que cada enlace abra la opinión correspondiente.
+6. Confirmá que las condiciones descritas en la web coincidan con las que ofrecés realmente. El texto no promete espera ni regreso incluidos: invita a consultarlos.
+7. Probá la medición con Google Tag Assistant antes de desplegar en producción.
 
-## Pasos recomendados
-1. En GitHub, abrí el repositorio y creá una rama `redisenio-v1` o una copia/backup del estado actual.
-2. Sobrescribí solo los cuatro archivos incluidos.
-3. Revisá la vista previa o el deployment de prueba de Cloudflare Pages.
-4. Verificá en móvil y escritorio que la imagen `hero2.png` carga, que todos los botones abren el WhatsApp correcto y que los textos coinciden con el servicio real.
-5. Probá el etiquetado con Google Tag Assistant antes de publicar definitivamente.
-6. Cuando esté validado, fusioná los cambios a `main`.
+## WhatsApp y medición
+- WhatsApp: `https://wa.me/543412288085`
+- Google Ads: `AW-17179407943`
+- Etiqueta de conversión existente: `Vd4JCInghocdEMfs4_8_`
+- GA4: `G-V765G25Z3Q`
 
-## WhatsApp y Google Ads
-- Número encontrado en el código actual: `+54 341 228-8085` (`https://wa.me/543412288085`).
-- Se conserva el ID de Google Ads `AW-17179407943` y la etiqueta de conversión `Vd4JCInghocdEMfs4_8_`.
-- Se conserva GA4 `G-V765G25Z3Q` y se añade el evento de analítica `whatsapp_click`.
-- El clic es una señal de contacto, no prueba de que el usuario envió un mensaje ni contrató un viaje.
-- El código incluye un fallback para abrir WhatsApp si el callback de medición no responde.
-
-No cambiar ni crear una nueva acción de conversión en Google Ads hasta comprobar con Tag Assistant que la etiqueta actual se dispara una sola vez. En Google Ads, la conversión de clic en WhatsApp debe seguir como la acción principal que ya habías definido; el evento analítico y el clic saliente no deben sumarse como conversiones primarias duplicadas.
+Se conserva la conversión existente de clic en WhatsApp. Un clic no demuestra que se haya enviado un mensaje ni que se haya contratado un traslado. No crees otra conversión principal para el mismo clic; verificá el disparo con Tag Assistant.
 
 ## SEO
-El sitemap contiene solo la URL de inicio porque esta versión es una landing page de una sola página con secciones. No agregues URLs al sitemap hasta crear páginas reales en esas rutas. `robots.txt` existente se conserva.
+El sitio está armado como una landing page de una sola página con secciones internas. El sitemap incluye la URL principal. El HTML mantiene metadatos sociales y datos estructurados para el servicio local.
 
-
-## Galería y reseñas
-- La galería usa ocho fotos seleccionadas y optimizadas a WebP.
-- Se incorporan ocho tarjetas con reseñas y enlaces individuales a Google Maps, según las capturas compartidas. Revisá la transcripción antes de publicar para corregir cualquier detalle de puntuación o texto que quieras conservar literalmente.
-- El enlace general de opiniones abre la ficha de Google Maps compartida.
-- No se muestra una puntuación promedio ni cantidad total de reseñas porque no se verificaron esos datos.
+## Importante
+Este paquete contiene los archivos de la web listos para revisar y subir. No modifica automáticamente GitHub ni publica cambios en Cloudflare Pages. La publicación ocurre cuando subís los archivos al repositorio conectado y Cloudflare completa el despliegue.
