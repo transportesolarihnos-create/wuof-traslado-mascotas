@@ -7,9 +7,10 @@ Paquete de reemplazo de los archivos principales para el sitio estático existen
 - `styles.css`
 - `script.js`
 - `sitemap.xml`
+- carpeta `imagenes-traslados/` (8 fotos optimizadas en WebP)
 
 ## Importante: no reemplazar el repositorio entero
-Este ZIP **no contiene los recursos de imágenes existentes**. Extraé estos archivos y copiá/sobrescribí únicamente los cuatro archivos indicados en la raíz del repositorio. Conservá `hero.png`, `hero2.png`, `hero3.png`, `hero4.png`, las demás imágenes, `robots.txt` y cualquier otra configuración existente.
+Este ZIP **no contiene los recursos de imágenes existentes**. Extraé estos archivos y copiá/sobrescribí los cuatro archivos indicados en la raíz del repositorio y copiá también la carpeta `imagenes-traslados/` completa. Conservá `hero.png`, `hero2.png`, `hero3.png`, `hero4.png`, las demás imágenes, `robots.txt` y cualquier otra configuración existente.
 
 La nueva portada usa `hero2.png`, que ya existe en el repositorio. Antes de publicar, confirmá que esa imagen sea la que querés mostrar como foto principal y que el texto alternativo describa fielmente su contenido. Si la imagen no es una foto real del vehículo/mascota, reemplazala por una foto propia y optimizada.
 
@@ -32,3 +33,10 @@ No cambiar ni crear una nueva acción de conversión en Google Ads hasta comprob
 
 ## SEO
 El sitemap contiene solo la URL de inicio porque esta versión es una landing page de una sola página con secciones. No agregues URLs al sitemap hasta crear páginas reales en esas rutas. `robots.txt` existente se conserva.
+
+
+## Galería y reseñas
+- La galería usa ocho fotos seleccionadas y optimizadas a WebP.
+- Se incorporan ocho tarjetas con reseñas y enlaces individuales a Google Maps, según las capturas compartidas. Revisá la transcripción antes de publicar para corregir cualquier detalle de puntuación o texto que quieras conservar literalmente.
+- El enlace general de opiniones abre la ficha de Google Maps compartida.
+- No se muestra una puntuación promedio ni cantidad total de reseñas porque no se verificaron esos datos.
