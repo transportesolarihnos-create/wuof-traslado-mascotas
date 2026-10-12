@@ -1,78 +1,65 @@
-// =======================================
-// WUOF - Hero Slider
-// =======================================
+/* WUOF! — medición de clics y pequeñas mejoras progresivas.
+   El clic en WhatsApp se mide como la conversión existente de Google Ads.
+   Es un clic de contacto, no una confirmación de mensaje enviado o viaje contratado. */
+(function () {
+  "use strict";
 
-const slides = document.querySelectorAll(".hero-slider img");
+  var conversionPending = false;
+  var conversionLabel = "AW-17179407943/Vd4JCInghocdEMfs4_8_";
 
-let current = 0;
+  window.gtag_report_conversion = function (url) {
+    if (!url) return true;
 
-function changeSlide() {
+    // Evita contar varios clics seguidos mientras se abre WhatsApp.
+    if (conversionPending) return false;
+    conversionPending = true;
 
-    slides[current].classList.remove("active");
+    var navigated = false;
+    var fallbackTimer;
 
-    current++;
-
-    if (current >= slides.length) {
-        current = 0;
+    function continueToWhatsApp() {
+      if (navigated) return;
+      navigated = true;
+      if (fallbackTimer) window.clearTimeout(fallbackTimer);
+      window.location.href = url;
     }
 
-    slides[current].classList.add("active");
-
-}
-
-setInterval(changeSlide, 5000);
-
-// =======================================
-// Header al hacer scroll
-// =======================================
-
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 50) {
-
-        header.style.background = "rgba(0,0,0,.85)";
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
-
-    } else {
-
-        header.style.background = "rgba(0,0,0,.45)";
-        header.style.boxShadow = "none";
-
+    // Si gtag no está disponible, prioriza que el contacto siga funcionando.
+    if (typeof window.gtag !== "function") {
+      continueToWhatsApp();
+      return false;
     }
 
-});
+    try {
+      // Conserva la acción de conversión existente de Google Ads.
+      window.gtag("event", "conversion", {
+        send_to: conversionLabel,
+        event_callback: continueToWhatsApp,
+        event_timeout: 900
+      });
 
-// =======================================
-// Animación al aparecer
-// =======================================
+      // Evita que un bloqueador o una conexión lenta impida abrir WhatsApp.
+      fallbackTimer = window.setTimeout(continueToWhatsApp, 1000);
 
-const observer = new IntersectionObserver((entries) => {
+      // Evento analítico complementario; no crea por sí mismo otra conversión de Ads.
+      window.gtag("event", "whatsapp_click", {
+        event_category: "contacto",
+        event_label: "wuof_web",
+        transport_type: "beacon"
+      });
+    } catch (error) {
+      continueToWhatsApp();
+    }
 
-    entries.forEach(entry => {
+    return false;
+  };
 
-        if (entry.isIntersecting) {
+  // Año automático en el pie.
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
 
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-
-        }
-
-    });
-
-}, {
-    threshold: 0.15
-});
-
-document.querySelectorAll(
-    ".service-card, .review, .number, .vehicle-gallery img"
-).forEach(el => {
-
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "all .7s ease";
-
-    observer.observe(el);
-
-});
+  // Mantiene las animaciones desactivadas si el usuario prefiere movimiento reducido.
+  if (!window.matchMedia || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+})();
